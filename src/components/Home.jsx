@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="/" className="h-full flex justify-between mx-[15%] my-40">
+      <div id="home" className="h-full flex justify-between mx-[15%] my-40">
         <div className="text-white text-4xl">
           <span className="text-yellow-500 text-sm my-4 gap-4">HELLO!</span>
           <h2 className="font-semibold"> I'm</h2>
