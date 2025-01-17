@@ -1,0 +1,65 @@
+{
+  "name": "Chandrashekher Prasad",
+  "designation": "B.Tech Student | Frontend Developer | Tech Enthusiast",
+  "resume" : "https://drive.google.com/file/d/1bpricUr-svmdwIU-elsHPP5H3PUrFZS7/view?usp=sharing",
+  "contact": {
+    "email": "cpsaw999041@gmail.com",
+    "phone": "+91-9990418622",
+    "linkedin": "https://www.linkedin.com/in/chandrashekher-prasad-a496a2293/",
+    "github": "https://github.com/Chandrashekher1"
+  },
+  "summary": "I am a passionate and dedicated B.Tech student at Maharaja Agrasen Institute of Technology, New Delhi, specializing in Frontend Development and exploring the world of technology. With expertise in data structures and algorithms in Java and a robust foundation in HTML, CSS, and JavaScript, I am continuously enhancing my skills by learning React JS and working on innovative projects. I also have hands-on experience with C and Python programming.",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React JS",
+    "Java (Data Structures and Algorithms)",
+    "C Programming",
+    "Python Programming",
+    "Version Control (Git & GitHub)"
+  ],
+  "projects": [
+    {
+      "name": "CinemaSense",
+      "description": "Designed an interactive MovieGPT website that suggests personalized movie recommendations using GPT API.",
+      "technologies": ["ReactJs", "Tailwind CSS", "GPT-API"],
+      "WebLink": "https://moviecpgpt.vercel.app/browse",
+      "GitHub" : "https://github.com/Chandrashekher1/MovieGPT" ,
+      "img": "assets/MovieGpt.png"
+    },
+    {
+      "name": "TasteTrail",
+      "description": "Developed a dynamic food app to help users discover top-rated restaurants and dishes near their current lo-cation.",
+      "technologies": ["ReactJs", "Tailwind CSS", "Swiggy API"],
+      "WebLink": "https://taste-trail-ten.vercel.app/",
+      "GitHub" : "https://github.com/Chandrashekher1/foodApp",
+      "img": "assets/foodApp.png"
+    },
+    {
+      "name": "CPStore",
+      "description": "CPStore is an e-commerce website where customers can easily browse, order, and get shop items delivered to their doorstep.",
+      "technologies": ["ReactJs" , "Talwind Css" ],
+      "WebLink": "https://cpstore-liard.vercel.app/",
+      "GitHub" : "https://github.com/Chandrashekher1/Shop2.O",
+      "img": "assets/CPStore.png"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Information Technology and Engineering",
+      "institution": "Maharaja Agrasen Institute of Technology, New Delhi",
+      "year": "2023 - Present"
+    }
+  ],
+  "achievements": [
+    "Completed 15+ projects in web development, showcasing creativity and technical proficiency.",
+    "Solved 200+ coding problems on LeetCode and GeeksforGeeks, focusing on DSA concepts.",
+    "Active member of Starup Sphere, contributing to technical events and workshops."
+  ],
+  "hobbies": [
+    "Exploring new technologies",
+    "Contributing to open-source projects",
+    "Gaming and puzzle solving"
+  ]
+}
