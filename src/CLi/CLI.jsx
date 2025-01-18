@@ -5,10 +5,7 @@ import { Command } from '../store/CliSlice';
 const CLI = () => {
     const [input, setInput] = useState("");
     const dispatch = useDispatch();
-    const selector = useSelector((state) => state.cli); 
-
-    console.log(selector);
-    
+    const selector = useSelector((state) => state.cli);     
     
     const handleCommand = () => {
         if (input.trim() !== "") {
@@ -28,11 +25,11 @@ const CLI = () => {
                         {line}
                     </pre>
                 ))}
-                <div className="flex flex-col  bg-black">
+                <div className="flex flex-col bg-black">
                     <span className='flex'>$ <p className="text-green-700"> {selector.currentDir} / </p> </span> 
                     <textarea
                         type="text"
-                        className="bg-black outline-none text-gray-300 w-full cursor-text h-96"
+                        className="bg-black outline-none text-gray-300 w-full cursor-text h-96" 
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleCommand()}

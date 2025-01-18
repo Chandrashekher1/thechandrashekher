@@ -5,14 +5,14 @@ const Projects = () => {
   return (
     <>
       <div id='projects' className='h-full text-white border-t-2 border-t-gray-900'>
-        <h1 className='font-bold text-4xl ml-[45%] text-yellow-500'>
+        <h1 className='font-bold text-4xl text-center  text-yellow-500'>
           PROJECTS
         </h1>
 
-        <div className='flex flex-wrap ml-[25%]'>
+        <div className='flex flex-wrap md:ml-[25%]'>
 
           {portfolio.projects.map((project) => (
-            <div className='ml-2 my-16 border border-gray-700 rounded-3xl shadow-2xl w-[70%]'>
+            <div className=' my-16 border mx-4 border-gray-700 rounded-3xl shadow-2xl md:w-[70%] md:ml-2'>
               <img src={project.img} 
                 className=' w-full rounded-lg h-68'
                 alt="project"/>
