@@ -15,7 +15,7 @@ const CLI = () => {
     };
 
     return (
-        <div className="bg-black h-full flex flex-col justify-between">
+        <div className="bg-black flex flex-col justify-between h-96">
             <div className="text-sm">
                 <p className="text-green-700">Portfolio- <span className="text-yellow-500">CP03</span></p>
             </div>
