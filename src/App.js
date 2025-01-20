@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 const App = () => {
-  const istoggle = useSelector((store) => store?.toggle?.isToggle)
 
   return (
     <div className='bg-black'  >
@@ -18,13 +17,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={
             <>
-              <Header />
-              {istoggle && (
-                  <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center" >
-                    <Body />
-                  </div>
-                )}
+              <Header />             
               <Home />
+              <Body/>  
               <About />
               <Projects />
               <Skills />
