@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toggleActive } from "../store/toggleSlice";
 
 const Header = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const [isHamburger, setIsHamburger] = useState(false)
 
   const handleLogo = () => {
@@ -86,12 +83,6 @@ const Header = () => {
                 onClick={() => handleScroll("contact")}
               >
                 Contact
-              </li>
-              <li
-                className="mx-4 my-2 md:my-0 cursor-pointer hover:text-yellow-500"
-                onClick={() => dispatch(toggleActive())}
-              >
-                CLI
               </li>
             </ul>
           </nav>

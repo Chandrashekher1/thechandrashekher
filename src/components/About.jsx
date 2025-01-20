@@ -5,12 +5,12 @@ import portfolio from '../Data/portfolioData.json';
 const About = () => {
   return (
     <>
-      <div id="about" className="h-full mb-16 text-white border-t-2 border-t-gray-800 px-6 md:px-16 lg:px-32">
-        <h1 className="font-bold text-4xl text-center mb-8">
+      <div id="about" className="h-screen  text-white border-t-2 border-t-gray-800 px-6 md:px-16 lg:px-32">
+        <h1 className="font-bold text-4xl text-center mt-28">
           About<span className="text-yellow-500"> Me</span>
         </h1>
 
-        <div className="flex flex-col md:flex-row items-center justify-between md:gap-12 lg:gap-24 my-16">
+        <div className="flex flex-col  md:flex-row items-center justify-between md:gap-12 lg:gap-24 my-32">
           <div className="flex-shrink-0 mb-8 md:mb-0">
             <img
               src="assets/profile.jpg"
