@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useFetch from './Hooks/useFetch';
 import CircularProgressVariants from './components/Loader';
+import Cursor from './components/Cursor';
 
 const App = () => {
   const { data: aboutData, loading: aboutLoading } = useFetch('about');
@@ -32,7 +33,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={
             <>
-              <Header />             
+              <Header />  
+              <Cursor/>           
               <Home data = {aboutData} />
               {/* <Body/>   */}
               <About data ={aboutData} />
