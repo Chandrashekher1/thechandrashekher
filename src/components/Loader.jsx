@@ -1,14 +1,22 @@
 import * as React from 'react';
-import Box from '@mui/joy/Box';
-import CircularProgress from '@mui/joy/CircularProgress';
+
+import LinearProgress from '@mui/joy/LinearProgress';
+import Stack from '@mui/joy/Stack';
 
 export default function CircularProgressVariants() {
   return (
-    <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap', backgroundColor:'black', fontSize:18 }}>
-      {/* <CircularProgress variant="solid" /> */}
-      {/* <CircularProgress variant="soft" /> */}
-      <CircularProgress variant="outlined" sx={{ '--CircularProgress-progressColor': 'yellow' }}/>
-      {/* <CircularProgress variant="plain" sx={{ '--CircularProgress-progressColor': 'yellow' }}/> */}
-    </Box>
+    <Stack
+      sx={{
+        display: 'flex',
+        gap: 2,
+        alignItems: 'center',
+        backgroundColor: 'black',
+        fontSize: 18,
+        padding: 2,
+        width: '100%',
+      }}
+    >
+      <LinearProgress color="warning" variant="soft" sx={{ width: '50%' }} />
+    </Stack>
   );
 }
