@@ -9,7 +9,7 @@ const SocialIcons = () => {
                 href="https://x.com/cpsaw03" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-red-600"
+                className="hover:text-yellow-600"
             >
                 <FaTwitter size={30} />
             </a>
@@ -17,7 +17,7 @@ const SocialIcons = () => {
                 href="https://www.linkedin.com/in/chandrashekher-prasad-a496a2293/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-red-600"
+                className="hover:text-yellow-600"
             >
                 <FaLinkedin size={30} />
             </a>
@@ -25,7 +25,7 @@ const SocialIcons = () => {
                 href="https://www.instagram.com/_chandrashekher_03/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-red-600"
+                className="hover:text-yellow-600"
             >
                 <FaInstagram size={30} />
             </a>
@@ -33,7 +33,7 @@ const SocialIcons = () => {
                 href="mailto:cpsaw999041@gmail.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-red-600"
+                className="hover:text-yellow-600"
             >
                 <AiOutlineMail size={30} />
             </a>
