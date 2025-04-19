@@ -4,6 +4,9 @@ import SocialIcons from "./SocilIcons"
 const Home = ({data}) => {
   const [dynamicText, setDynamicText] = useState("2nd Year Student");
 
+  console.log(data);
+  
+
   useEffect(() => {
     if (data?.length > 0 && data[0].profession.length > 0) {
       let index = 0;
@@ -46,7 +49,7 @@ const Home = ({data}) => {
                 Hire Me
               </a>
               <a
-                href={data[0].socialLinks.portfolio}
+                href={data[0].socialLinks.resume}
                 className="bg-yellow-600 text-white rounded-xl text-lg px-6 py-2 font-semibold hover:scale-105 transition-transform"
               >
                 Resume
