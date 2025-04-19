@@ -1,0 +1,1 @@
+export const portfolio_URL = "https://cp-portfolio-te4a.onrender.com/api"
