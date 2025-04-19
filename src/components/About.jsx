@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const About = ({data}) => {
+  const [showFullBio, setShowFullBio] = useState(false)
+  const toggleBio =() => {
+    setShowFullBio(prev => !prev)
+  }
   return (
     <>
       <div
@@ -20,9 +24,9 @@ const About = ({data}) => {
             />
           </div>
 
-          <div className="text-base sm:text-lg md:text-xl border border-blue-400 bg-gray-900 rounded-xl p-4 sm:p-6 lg:p-8 w-full md:w-2/3">
+          <div className="text-base sm:text-lg md:text-xl  bg-gray-900 rounded-xl p-4 sm:p-6 lg:p-8 w-full md:w-2/3">
             <p className="leading-relaxed">
-              {data.loading ? 'Loading...' : data[0]?.bio}
+            {showFullBio ? data[0].bio : `${data[0].bio.slice(0, 470)}... `} <span className='text-yellow-500 cursor-pointer' onClick={toggleBio}>{showFullBio ? 'Read Less' : 'Read More'}</span>
             </p>
           </div>
         </div>
