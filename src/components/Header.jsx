@@ -24,9 +24,9 @@ const Header = () => {
   return (
     <>
       <div className="flex justify-between items-center text-gray-100 p-4 text-lg font-semibold sticky top-0 bg-black">
-        <div className="ml-6">
+        <div className="ml-2">
           <p
-            className="font-bold text-xl cursor-pointer"
+            className="font-bold text-2xl cursor-pointer"
             onClick={handleLogo}
           >
             CP<span className="text-yellow-500">03</span>
@@ -53,7 +53,7 @@ const Header = () => {
               isHamburger ? "block" : "hidden"
             }`} 
           >
-            <ul className="flex flex-col items-center md:flex-row">
+            <ul className="flex flex-col items-center md:flex-row text-xl">
               <li
                 className="mx-4 my-2 md:my-0 cursor-pointer hover:text-yellow-500"
                 onClick={() => handleScroll("home")}
