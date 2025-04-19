@@ -21,7 +21,7 @@ const Skills = ({ data }) => {
           My <span className="text-white">Skills</span>
         </h1>
 
-        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto'>
           {data.map((skill, index) => {
             const width = getProgressWidth(skill.proficiency);
             return (
