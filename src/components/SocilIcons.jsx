@@ -4,7 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 
 const SocialIcons = () => {
     return (
-        <div style={{ display: 'flex', gap: '30px', marginLeft: '70px', marginTop: '20px' }}>
+        <div style={{ display: 'flex', gap: '30px', marginLeft: '', marginTop: '20px' }}>
             <a 
                 href="https://x.com/cpsaw03" 
                 target="_blank" 
