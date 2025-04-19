@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useFetch from './Hooks/useFetch';
+import CircularProgressVariants from './components/Loader';
 
 const App = () => {
   const { data: aboutData, loading: aboutLoading } = useFetch('about');
@@ -17,8 +18,9 @@ const App = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen text-white text-2xl">
-        Loading...
+      <div className="flex flex-col items-center justify-center h-screen text-white text-2xl bg-black">
+        <h1 className='text-6xl font-bold my-4'>▫ CP<span className='text-yellow-600'>03 ▫</span></h1>
+        <CircularProgressVariants/>
       </div>
     );
   }
