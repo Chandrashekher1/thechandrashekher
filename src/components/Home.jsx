@@ -1,51 +1,73 @@
 import React, { useEffect, useState } from "react";
-import portfolio from "../Data/portfolioData.json";
-import SocialIcons from "./SocilIcons";
+import SocialIcons from "./SocilIcons"
 
-const Home = () => {
-  const [dynamicText, setDynamicText] = useState("2nd Year Student")
+const Home = ({data}) => {
+  const [dynamicText, setDynamicText] = useState("2nd Year Student");
 
   useEffect(() => {
-    const texts = ["2nd Year Student", "Frontend Developer","Tech Enthusiast"]
-    let index = 0
+    if (data?.length > 0 && data[0].profession.length > 0) {
+      let index = 0;
+      setDynamicText(data[0].profession[0]);
 
-    const interval = setInterval(() => {
-      index = (index + 1) % texts.length
-      setDynamicText(texts[index])
-    }, 3000)
+      const interval = setInterval(() => {
+        index = (index + 1) % data[0].profession.length;
+        setDynamicText(data[0].profession[index]);
+      }, 3000);
 
-    return () => clearInterval(interval)
-  }, []);
+      return () => clearInterval(interval);
+    }
+  }, [data]);
+
 
   return (
-    <>
-      <div id="home" className="h-screen flex flex-col-reverse justify-between mx-[15%] mt-60 md:flex-row">
-        <div className="text-white text-4xl">
-          <span className="text-yellow-500 text-sm my-4 gap-4">HELLO!</span>
-          <h2 className="font-semibold"> I'm</h2>
-          <h1 className="font-bold my-4">{portfolio.name}</h1>
-          <p>And I'm <span className="font-semibold text-4xl text-yellow-500">{dynamicText}</span></p>
-          <div className="flex my-8">
-            <button className="bg-yellow-600 rounded-xl text-lg px-4 font-semibold hover:scale-110">
-            <a href="mailto:cpsaw999041@gmail.com" >Hire Me</a>
-            </button>
-            <button className="bg-yellow-600 rounded-xl text-lg p-2 mx-8 px-4 font-semibold hover:scale-110" >
-              <a href={portfolio.resume}>Resume</a>
-            </button>
-          </div>
-          <div className="mt-16 -ml-16">
-            <SocialIcons/>
-          </div>
-        </div>
-        <div className="mb-10 lg:mb-0">
-          <img
-            src="assets/profile.jpg"
-            alt="Profile"
-            className="rounded-full shadow-xl shadow-teal-600 object-cover h-60 w-60 sm:h-80 sm:w-80 mx-auto lg:mx-0"
-          />
+    <div
+      id="home"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-4 sm:px-10 md:px-16 lg:px-28 py-10"
+    >
+      <div className="text-white text-center md:text-left w-full md:w-1/2 mx-16">
+        <p className="text-yellow-500 text-base sm:text-lg mb-2">HELLO!</p>
+        <h2 className="text-2xl sm:text-3xl font-semibold">I'm</h2>
+
+        {data?.length > 0 && (
+          <>
+            <h1 className="font-bold text-3xl sm:text-5xl my-2 sm:my-4">{data[0].name}</h1>
+            <p className="text-lg sm:text-xl">
+              And I'm{" "}
+              <span className="font-semibold text-yellow-500 text-2xl sm:text-3xl">
+                {dynamicText}
+              </span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+              <a
+                href={`mailto:${data[0].email}`}
+                className="bg-yellow-600 text-white rounded-xl text-lg px-6 py-2 font-semibold hover:scale-105 transition-transform"
+              >
+                Hire Me
+              </a>
+              <a
+                href={data[0].socialLinks.portfolio}
+                className="bg-yellow-600 text-white rounded-xl text-lg px-6 py-2 font-semibold hover:scale-105 transition-transform"
+              >
+                Resume
+              </a>
+            </div>
+          </>
+        )}
+
+        <div className="mt-10 mx-16 md:mx-0">
+          <SocialIcons />
         </div>
       </div>
-    </>
+
+      <div className="w-full md:w-1/2 flex justify-center">
+        <img
+          src="assets/profile.jpg"
+          alt="Profile"
+          className="rounded-full shadow-xl shadow-teal-600 object-cover h-64 w-64 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
+        />
+      </div>
+    </div>
   );
 };
 
