@@ -6,7 +6,6 @@ const Body = () => {
   return (
     <div className="h-full bg-black bg-cover bg-center" >
       <Header/>
-     
     </div>
   )
 }
