@@ -43,7 +43,7 @@ const Projects = ({data}) => {
                   {project.technologies.map((tech, index) => (
                     <p
                       key={index}
-                      className='m-2 px-4 py-1 border border-purple-600 rounded-full bg-blue-700 text-sm hover:scale-105 transition-transform cursor-pointer'
+                      className='m-2 px-4 py-2 border border-purple-600 rounded-md font-semibold bg-blue-700 text-sm hover:scale-105 transition-transform cursor-pointer'
                     >
                       {tech}
                     </p>
