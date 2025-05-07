@@ -5,6 +5,9 @@ const About = ({data}) => {
   const toggleBio =() => {
     setShowFullBio(prev => !prev)
   }
+
+
+  
   return (
     <>
       <div
