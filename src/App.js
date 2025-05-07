@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useFetch from './Hooks/useFetch';
 import CircularProgressVariants from './components/Loader';
 import Cursor from './components/Cursor';
+import Admin from './components/Admin';
+import Dashboard from './components/Dashboard';
+import UAbout from './uploads/UAbout';
 
 const App = () => {
   const { data: aboutData, loading: aboutLoading } = useFetch('about');
@@ -41,9 +44,15 @@ const App = () => {
               <Projects data={projectData}/>
               <Skills data={skillData} />
               <Contact />
+              
             </>
           } />
           {/* <Route path="/cli" element={<Body />} /> */}
+          <Route path="/admin/login" element={<Admin/>} />
+          <Route path="/admin/dashboard" element={<Dashboard/>} />
+          <Route path="/upload/about" element={<UAbout/>} />
+
+
         </Routes>
       </Router>
     </div>
