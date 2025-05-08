@@ -40,10 +40,10 @@ const About = ({ data }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            // initial={{ opacity: 0, x: 80 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: false, amount: 0.2 }}
+            // transition={{ duration: 0.6 }}
             className="text-base sm:text-lg md:text-xl bg-gray-900 rounded-xl p-4 sm:p-6 lg:p-8 w-full md:w-2/3"
           >
             <p className="leading-relaxed">
