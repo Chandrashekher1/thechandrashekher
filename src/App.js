@@ -12,6 +12,8 @@ import Cursor from './components/Cursor';
 import Admin from './components/Admin';
 import Dashboard from './components/Dashboard';
 import UAbout from './uploads/UAbout';
+import UProject from './uploads/UProject';
+import USkill from './uploads/USkill';
 
 const App = () => {
   const { data: aboutData, loading: aboutLoading } = useFetch('about');
@@ -51,6 +53,9 @@ const App = () => {
           <Route path="/admin/login" element={<Admin/>} />
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="/upload/about" element={<UAbout/>} />
+          <Route path="/upload/project" element={<UProject/>} />
+          <Route path="/upload/skill" element={<USkill/>} />
+
 
 
         </Routes>
