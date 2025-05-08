@@ -2,6 +2,9 @@ import React from 'react'
 import {motion} from "framer-motion"
 
 const Projects = ({data}) => {
+
+  console.log(data)
+
   return (
     <>
       <motion.div
@@ -24,10 +27,10 @@ const Projects = ({data}) => {
               <img
                 src={project.image}
                 className='w-full h-56 sm:h-64 md:h-72 object-cover rounded-t-3xl'
-                alt={project.name}
+                alt={project.title}
               />
               <div className='p-6'>
-                <h1 className='text-center font-bold text-2xl text-yellow-400'>{project.name}</h1>
+                <h1 className='text-center font-bold text-2xl text-yellow-400'>{project.title}</h1>
                 <p className='mt-4 text-base sm:text-lg text-gray-300'>{project.description}</p>
                 
                 <div className='flex justify-between flex-wrap gap-4 mt-6'>
