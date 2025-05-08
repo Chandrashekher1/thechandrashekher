@@ -78,7 +78,7 @@ const Dashboard = () => {
                 <div className='flex px-6 py-4 my-1 justify-between'>
                   <h1 className='font-bold text-2xl text-blue-500'>Projects</h1>
                   <div className='mx-32'>
-                    <button className='mx-16 px-4 py-2 font-semibold rounded-md bg-blue-700 '>NEW+</button>
+                    <button className='mx-16 px-4 py-2 font-semibold rounded-md bg-blue-700 ' onClick={() => navigate('/upload/project')}>NEW+</button>
                     <button className='px-4 py-2 bg-blue-700 font-semibold rounded-md'>Modify</button>
                   </div>
               </div>
@@ -92,7 +92,7 @@ const Dashboard = () => {
                         <p key={index} className='text-sm flex text-gray-400'>{project1}</p>
                       ))}
                     </div>
-                    
+                    <button className='px-6 py-2 bg-red-700 rounded-md my-4' onClick={() => navigate('/upload/project')}>Delete</button>
                   </div>
                 
                 ))}
@@ -106,7 +106,7 @@ const Dashboard = () => {
                 <div className='flex px-6 py-4 my-1 justify-between'>
                   <h1 className='font-bold text-2xl text-blue-500'>SKills</h1>
                   <div className='mx-32'>
-                    <button className='mx-16 px-4 py-2 font-semibold rounded-md bg-blue-700 '>NEW+</button>
+                    <button className='mx-16 px-4 py-2 font-semibold rounded-md bg-blue-700 ' onClick={() => navigate('/upload/skill')}>NEW+</button>
                     <button className='px-4 py-2 bg-blue-700 font-semibold rounded-md'>Modify</button>
                   </div>
               </div>

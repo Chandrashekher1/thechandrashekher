@@ -1,9 +1,16 @@
 import React from 'react'
+import {motion} from "framer-motion"
 
 const Projects = ({data}) => {
   return (
     <>
-      <div id='projects' className='text-white border-t-2 border-t-gray-900 px-4 py-16'>
+      <motion.div
+       id='projects'
+        initial={{ opacity: 0, y: 50 }}   
+        whileInView={{ opacity: 1, y: 0 }} 
+        // viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className='text-white border-t-2 border-t-gray-900 px-4 py-16'>
         <h1 className='text-center font-bold text-3xl sm:text-4xl text-yellow-500 mb-12'>
           PROJECTS
         </h1>
@@ -12,7 +19,7 @@ const Projects = ({data}) => {
           {data.map((project, index) => (
             <div
               key={index}
-              className='w-full max-w-3xl border border-gray-700 rounded-3xl shadow-2xl overflow-hidden bg-gray-900 hover:scale-[1.01] transition-transform duration-300'
+              className='w-full max-w-3xl border border-gray-700 rounded-3xl shadow-2xl overflow-hidden bg-gray-900  transition-transform duration-300'
             >
               <img
                 src={project.image}
@@ -53,7 +60,7 @@ const Projects = ({data}) => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

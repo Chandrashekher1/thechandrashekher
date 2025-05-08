@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
+import {motion} from "framer-motion"
 
 const Contact = () => {
 
@@ -8,7 +9,13 @@ const Contact = () => {
   }
   return (
     <>
-      <div id='contact' className='h-full text-white border-t-2 border-t-gray-800'>
+      <motion.div 
+      id='contact'
+      initial={{ opacity: 0, y: 100 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+       className='h-screen  text-white border-t-2 border-t-gray-800'>
         <h1 className='font-bold text-4xl text-center my-8 text-white'>Contact <span className='text-yellow-500'>Me</span></h1>
         <p className='text-center text-xl'>I like to connect with like-minded people. If you just want to connect with me, please send me Message</p>
 
@@ -36,7 +43,7 @@ const Contact = () => {
 
         </div>
         
-    </div>
+    </motion.div>
     <Footer/>
     </>
   )

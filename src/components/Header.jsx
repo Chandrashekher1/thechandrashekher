@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {motion} from "framer-motion"
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,7 +24,12 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center text-gray-100 p-4 text-lg font-semibold sticky top-0 bg-black">
+      <motion.div
+      initial={{ opacity: 0, y: 100 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+       className="flex justify-between items-center text-gray-100 p-4 text-lg font-semibold sticky top-0 bg-black">
         <div className="ml-2">
           <p
             className="font-bold text-2xl cursor-pointer"
@@ -93,7 +99,7 @@ const Header = () => {
             <a href="mailto:cpsaw999041@gmail.com">Hire Me</a>
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

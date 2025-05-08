@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from "framer-motion"
 
 const Skills = ({ data }) => {
   const getProgressWidth = (level) => {
@@ -16,7 +17,13 @@ const Skills = ({ data }) => {
 
   return (
     <>
-      <div id='skills' className='min-h-screen bg-black text-white border-t-2 border-t-gray-900 px-4 py-20'>
+      <motion.div
+       id='skills'
+        initial={{ opacity: 0, y: 100 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        // viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className='min-h-screen bg-black text-white border-t-2 border-t-gray-900 px-4 py-20'>
         <h1 className='font-bold text-3xl sm:text-4xl text-center text-yellow-400 mb-16'>
           My <span className="text-white">Skills</span>
         </h1>
@@ -54,7 +61,7 @@ const Skills = ({ data }) => {
             );
           })}
         </div>
-      </div>
+      </motion.div>
 
       <style jsx="true">{`
         .flip-card {
