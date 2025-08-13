@@ -13,7 +13,7 @@ const About = ({ data }) => {
         whileInView={{ opacity: 1, y: 0 }} 
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="min-h-screen text-white border-t-2 border-t-gray-800 px-4 sm:px-8 md:px-16 lg:px-32 py-16"
+        className="min-h-screen text-white border-t-2 border-t-gray-800 px-4 sm:px-8 md:px-16 lg:px-32 py-16 z-0"
       >
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -44,7 +44,7 @@ const About = ({ data }) => {
             // whileInView={{ opacity: 1, x: 0 }}
             // viewport={{ once: false, amount: 0.2 }}
             // transition={{ duration: 0.6 }}
-            className="text-base sm:text-lg md:text-xl bg-gray-900 rounded-xl p-4 sm:p-6 lg:p-8 w-full md:w-2/3"
+            className="text-base sm:text-lg md:text-xl bg-gray-900 rounded-xl p-4 sm:p-6 lg:p-8 w-full md:w-2/3 z-0"
           >
             <p className="leading-relaxed">
               {showFullBio ? data[0].bio : `${data[0].bio.slice(0, 470)}... `}
