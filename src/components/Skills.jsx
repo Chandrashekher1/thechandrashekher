@@ -8,7 +8,7 @@ const Skills = ({ data }) => {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className='min-h-screen bg-black text-white border-t-2 border-t-gray-900 px-4 py-20'
+      className='min-h-screen bg-black text-white border-t-2 border-t-gray-900 px-4 py-20 z-0'
     >
       <h1 className='font-bold text-3xl sm:text-4xl text-center text-yellow-400 mb-16'>
         My <span className="text-white">Skills</span>
