@@ -29,7 +29,7 @@ const Header = () => {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-       className="flex justify-between items-center text-gray-100 p-4 text-lg font-semibold sticky top-0 bg-black">
+       className="flex justify-between items-center text-gray-100 p-4 text-lg font-semibold sticky top-0 bg-black z-10">
         <div className="ml-2">
           <p
             className="font-bold text-2xl cursor-pointer"
