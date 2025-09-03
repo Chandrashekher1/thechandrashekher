@@ -1,1 +1,1 @@
-export const portfolio_URL = "https://portfoliobackend-production-3719.up.railway.app/api"
+export const portfolio_URL = "https://cp-portfolio-te4a.onrender.com/"
