@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SocialIcons from "./SocilIcons"
 import {motion} from "framer-motion"
+import { Call } from "./Call";
 
 const Home = ({data}) => {
   const [dynamicText, setDynamicText] = useState("2nd Year Student");
@@ -29,7 +30,7 @@ const Home = ({data}) => {
       initial={{ opacity: 0, y: 100 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }} 
       className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-4 sm:px-10 md:px-16 lg:px-28 py-10"
     >
       <div className="text-white text-center md:text-left w-full md:w-1/2 mx-16">
@@ -75,6 +76,7 @@ const Home = ({data}) => {
           className="rounded-full shadow-xl shadow-teal-600 object-cover h-64 w-64 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
         />
       </div>
+      <Call/>
     </motion.div>
   );
 };
