@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import SocialIcons from "./SocilIcons"
 import {motion} from "framer-motion"
-import { Call } from "./Call";
 
 const Home = ({data}) => {
   const [dynamicText, setDynamicText] = useState("2nd Year Student");
-
-  console.log(data);
-  
-
   useEffect(() => {
     if (data?.length > 0 && data[0].profession.length > 0) {
       let index = 0;
@@ -76,7 +71,6 @@ const Home = ({data}) => {
           className="rounded-full shadow-xl shadow-teal-600 object-cover h-64 w-64 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
         />
       </div>
-      <Call/>
     </motion.div>
   );
 };
