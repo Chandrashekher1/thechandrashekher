@@ -1,1 +1,1 @@
-export const portfolio_URL = "https://cp-portfolio-te4a.onrender.com/api"
+export const portfolio_URL = "https://portfolio-backend-yjsr.onrender.com/api"
